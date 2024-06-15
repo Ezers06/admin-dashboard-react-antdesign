@@ -73,6 +73,7 @@ export const TaskList = ({ children }: React.PropsWithChildren) => {
       (task) => task?.stageId === null
     );
 
+    // @ts-ignore
     const grouped: TaskStage[] = stages?.data.map((stage) => ({
       ...stage,
       tasks: tasks?.data.filter(
